@@ -1,0 +1,20 @@
+{
+  "name": "quick-start",
+  "private": true,
+  "scripts": {
+    "generate": "zen generate",
+    "dev": "tsx main.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@types/sql.js": "^1.4.9",
+    "@zenstackhq/cli": "next",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@zenstackhq/kysely-sql-js": "next",
+    "@zenstackhq/runtime": "next",
+    "sql.js": "^1.13.0"
+  }
+}
