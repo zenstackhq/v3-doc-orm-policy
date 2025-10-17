@@ -34,6 +34,9 @@ export const schema = {
                     relation: { opposite: "author" }
                 }
             },
+            attributes: [
+                { name: "@@allow", args: [{ name: "operation", value: ExpressionUtils.literal("create,read") }, { name: "condition", value: ExpressionUtils.literal(true) }] }
+            ],
             idFields: ["id"],
             uniqueFields: {
                 id: { type: "Int" },
@@ -106,6 +109,11 @@ export const schema = {
                     ]
                 }
             },
+            attributes: [
+                { name: "@@deny", args: [{ name: "operation", value: ExpressionUtils.literal("all") }, { name: "condition", value: ExpressionUtils.binary(ExpressionUtils.call("auth"), "==", ExpressionUtils._null()) }] },
+                { name: "@@allow", args: [{ name: "operation", value: ExpressionUtils.literal("read") }, { name: "condition", value: ExpressionUtils.field("published") }] },
+                { name: "@@allow", args: [{ name: "operation", value: ExpressionUtils.literal("all") }, { name: "condition", value: ExpressionUtils.binary(ExpressionUtils.call("auth"), "==", ExpressionUtils.field("author")) }] }
+            ],
             idFields: ["id"],
             uniqueFields: {
                 id: { type: "Int" },

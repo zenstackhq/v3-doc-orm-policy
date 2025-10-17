@@ -1,20 +1,21 @@
 {
-  "name": "quick-start",
-  "private": true,
-  "scripts": {
-    "generate": "zen generate",
-    "dev": "tsx main.ts"
-  },
-  "devDependencies": {
-    "@types/node": "^24.1.0",
-    "@types/sql.js": "^1.4.9",
-    "@zenstackhq/cli": "next",
-    "tsx": "^4.20.3",
-    "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "@zenstackhq/kysely-sql-js": "next",
-    "@zenstackhq/runtime": "next",
-    "sql.js": "^1.13.0"
-  }
+    "name": "quick-start",
+    "private": true,
+    "scripts": {
+        "generate": "zen generate",
+        "dev": "npm run generate && tsx main.ts"
+    },
+    "devDependencies": {
+        "@types/node": "^24.1.0",
+        "@types/sql.js": "^1.4.9",
+        "@zenstackhq/cli": "^3.0.0-beta.10",
+        "tsx": "^4.20.3",
+        "typescript": "^5.8.3"
+    },
+    "dependencies": {
+        "@zenstackhq/kysely-sql-js": "^3.0.0-beta.10",
+        "@zenstackhq/plugin-policy": "^3.0.0-beta.10",
+        "@zenstackhq/runtime": "^3.0.0-beta.10",
+        "sql.js": "^1.13.0"
+    }
 }
