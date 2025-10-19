@@ -1,5 +1,3 @@
-// This is a sample model to get you started.
-
 datasource db {
     provider = 'sqlite'
 }
@@ -13,22 +11,21 @@ model User {
     email    String @unique
     posts    Post[]
 
-    @@allow('create,read', true)
+    @@allow('all', true)
 }
 
 model Post {
     id        Int      @id @default(autoincrement())
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
     title     String
-    content   String?
-    slug      String?  @unique
-    viewCount Int      @default(0)
     published Boolean  @default(false)
     author    User?    @relation(fields: [authorId], references: [id])
     authorId  Int?
 
-    @@deny('all', auth() == null)
-    @@allow('read', published)
-    @@allow('all', auth() == author)
+    @@allow('all', true)
+
+    // deny publishing if not the author
+    @@deny('post-update', published && auth().id != authorId)
+
+    // prevent changing authorId on update
+    @@deny('post-update', authorId != before().authorId)
 }

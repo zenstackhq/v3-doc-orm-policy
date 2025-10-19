@@ -1,8 +1,9 @@
 import { PolicyPlugin } from '@zenstackhq/plugin-policy';
-import { createClient } from './db';
+import { createClient } from '../db';
+import { schema } from './zenstack/schema';
 
 async function main() {
-    const db = await createClient();
+    const db = await createClient(schema);
 
     // create users and posts with raw client
     const alice = await db.user.create({

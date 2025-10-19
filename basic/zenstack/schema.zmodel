@@ -1,0 +1,27 @@
+datasource db {
+    provider = 'sqlite'
+}
+
+plugin policy {
+    provider = '@zenstackhq/plugin-policy'
+}
+
+model User {
+    id       Int    @id @default(autoincrement())
+    email    String @unique
+    posts    Post[]
+
+    @@allow('create,read', true)
+}
+
+model Post {
+    id        Int      @id @default(autoincrement())
+    title     String
+    published Boolean  @default(false)
+    author    User?    @relation(fields: [authorId], references: [id])
+    authorId  Int?
+
+    @@deny('all', auth() == null)
+    @@allow('read', published)
+    @@allow('all', auth() == author)
+}

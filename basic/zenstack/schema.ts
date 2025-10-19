@@ -53,39 +53,9 @@ export const schema = {
                     attributes: [{ name: "@id" }, { name: "@default", args: [{ name: "value", value: ExpressionUtils.call("autoincrement") }] }],
                     default: ExpressionUtils.call("autoincrement")
                 },
-                createdAt: {
-                    name: "createdAt",
-                    type: "DateTime",
-                    attributes: [{ name: "@default", args: [{ name: "value", value: ExpressionUtils.call("now") }] }],
-                    default: ExpressionUtils.call("now")
-                },
-                updatedAt: {
-                    name: "updatedAt",
-                    type: "DateTime",
-                    updatedAt: true,
-                    attributes: [{ name: "@updatedAt" }]
-                },
                 title: {
                     name: "title",
                     type: "String"
-                },
-                content: {
-                    name: "content",
-                    type: "String",
-                    optional: true
-                },
-                slug: {
-                    name: "slug",
-                    type: "String",
-                    unique: true,
-                    optional: true,
-                    attributes: [{ name: "@unique" }]
-                },
-                viewCount: {
-                    name: "viewCount",
-                    type: "Int",
-                    attributes: [{ name: "@default", args: [{ name: "value", value: ExpressionUtils.literal(0) }] }],
-                    default: 0
                 },
                 published: {
                     name: "published",
@@ -116,8 +86,7 @@ export const schema = {
             ],
             idFields: ["id"],
             uniqueFields: {
-                id: { type: "Int" },
-                slug: { type: "String" }
+                id: { type: "Int" }
             }
         }
     },
