@@ -1,6 +1,6 @@
 import { SqlJsDialect } from '@zenstackhq/kysely-sql-js';
-import { ZenStackClient } from '@zenstackhq/runtime';
-import { SchemaDef } from '@zenstackhq/runtime/schema';
+import { ZenStackClient } from '@zenstackhq/orm';
+import { SchemaDef } from '@zenstackhq/orm/schema';
 import initSqlJs from 'sql.js';
 
 export async function createClient<Schema extends SchemaDef>(schema: Schema) {
