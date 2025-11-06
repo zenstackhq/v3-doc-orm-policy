@@ -10,14 +10,14 @@
     "devDependencies": {
         "@types/node": "^24.1.0",
         "@types/sql.js": "^1.4.9",
-        "@zenstackhq/cli": "next",
+        "@zenstackhq/cli": "^3.0.0-beta.19",
         "tsx": "^4.20.3",
         "typescript": "^5.8.3"
     },
     "dependencies": {
-        "@zenstackhq/kysely-sql-js": "next",
-        "@zenstackhq/plugin-policy": "next",
-        "@zenstackhq/orm": "next",
+        "@zenstackhq/kysely-sql-js": "^3.0.0-beta.19",
+        "@zenstackhq/orm": "^3.0.0-beta.19",
+        "@zenstackhq/plugin-policy": "^3.0.0-beta.19",
         "sql.js": "^1.13.0"
     }
 }
