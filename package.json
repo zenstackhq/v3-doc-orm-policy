@@ -6,7 +6,7 @@
         "basic": "zen generate --schema basic/zenstack/schema.zmodel && tsx basic/main.ts",
         "post-update": "zen generate --schema post-update/zenstack/schema.zmodel && tsx post-update/main.ts",
         "dev": "npm run basic",
-        "up": "npm i @zenstackhq/cli@next @zenstackhq/orm@next @zenstackhq/plugin-policy@next"
+        "up": "npm i @zenstackhq/cli@latest @zenstackhq/orm@latest @zenstackhq/plugin-policy@latest"
     },
     "devDependencies": {
         "@types/node": "^24.1.0",
