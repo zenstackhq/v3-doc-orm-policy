@@ -2,9 +2,10 @@
     "name": "quick-start",
     "private": true,
     "scripts": {
-        "generate": "zen generate --schema basic/zenstack/schema.zmodel && zen generate --schema post-update/zenstack/schema.zmodel",
+        "generate": "zen generate --schema basic/zenstack/schema.zmodel && zen generate --schema post-update/zenstack/schema.zmodel && zen generate --schema field-level/zenstack/schema.zmodel",
         "basic": "zen generate --schema basic/zenstack/schema.zmodel && tsx basic/main.ts",
         "post-update": "zen generate --schema post-update/zenstack/schema.zmodel && tsx post-update/main.ts",
+        "field-level": "zen generate --schema field-level/zenstack/schema.zmodel && tsx field-level/main.ts",
         "dev": "npm run basic",
         "up": "npm i @zenstackhq/cli@latest @zenstackhq/orm@latest @zenstackhq/plugin-policy@latest"
     },
