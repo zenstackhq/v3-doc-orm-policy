@@ -1,24 +1,25 @@
 {
-    "name": "quick-start",
-    "private": true,
-    "scripts": {
-        "generate": "zen generate --schema basic/zenstack/schema.zmodel && zen generate --schema post-update/zenstack/schema.zmodel && zen generate --schema field-level/zenstack/schema.zmodel",
-        "basic": "zen generate --schema basic/zenstack/schema.zmodel && tsx basic/main.ts",
-        "post-update": "zen generate --schema post-update/zenstack/schema.zmodel && tsx post-update/main.ts",
-        "field-level": "zen generate --schema field-level/zenstack/schema.zmodel && tsx field-level/main.ts",
-        "dev": "npm run basic",
-        "up": "npm i @zenstackhq/cli@latest @zenstackhq/orm@latest @zenstackhq/plugin-policy@latest"
-    },
-    "devDependencies": {
-        "@types/node": "^24.1.0",
-        "@types/sql.js": "^1.4.9",
-        "@zenstackhq/cli": "^3.3.3",
-        "tsx": "^4.20.3",
-        "typescript": "^5.8.3"
-    },
-    "dependencies": {
-        "@zenstackhq/orm": "^3.3.3",
-        "@zenstackhq/plugin-policy": "^3.3.3",
-        "sql.js": "^1.13.0"
-    }
+  "name": "quick-start",
+  "private": true,
+  "scripts": {
+    "generate": "zen generate --schema basic/zenstack/schema.zmodel && zen generate --schema post-update/zenstack/schema.zmodel && zen generate --schema field-level/zenstack/schema.zmodel",
+    "basic": "zen generate --schema basic/zenstack/schema.zmodel && tsx basic/main.ts",
+    "post-update": "zen generate --schema post-update/zenstack/schema.zmodel && tsx post-update/main.ts",
+    "field-level": "zen generate --schema field-level/zenstack/schema.zmodel && tsx field-level/main.ts",
+    "dev": "npm run basic",
+    "up": "npm i @zenstackhq/cli@latest @zenstackhq/orm@latest @zenstackhq/plugin-policy@latest @zenstackhq/schema@latest"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@types/sql.js": "^1.4.9",
+    "@zenstackhq/cli": "^3.4.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@zenstackhq/orm": "^3.4.2",
+    "@zenstackhq/plugin-policy": "^3.4.2",
+    "@zenstackhq/schema": "^3.4.2",
+    "sql.js": "^1.13.0"
+  }
 }
