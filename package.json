@@ -12,14 +12,14 @@
   "devDependencies": {
     "@types/node": "^24.1.0",
     "@types/sql.js": "^1.4.9",
-    "@zenstackhq/cli": "^3.4.5",
+    "@zenstackhq/cli": "^3.4.6",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@zenstackhq/orm": "^3.4.5",
-    "@zenstackhq/plugin-policy": "^3.4.5",
-    "@zenstackhq/schema": "^3.4.5",
+    "@zenstackhq/orm": "^3.4.6",
+    "@zenstackhq/plugin-policy": "^3.4.6",
+    "@zenstackhq/schema": "^3.4.6",
     "sql.js": "^1.13.0"
   }
 }
